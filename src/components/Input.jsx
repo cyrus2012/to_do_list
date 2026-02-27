@@ -19,10 +19,10 @@ function Input(props){
     }
 
     return (
-        <>
+        <div>
             <textarea value={note} onChange={onTextChange}></textarea>
             <button onClick={addNote}>Add</button>
-        </>
+        </div>
     );
 
 }

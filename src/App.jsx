@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Input from './components/Input.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  function addNote(text){
+    console.log(text);
+  }
+
 
   return (
     <>
-
-      <h1>Vite + React</h1>
-      
+      <h1>To Do List</h1>
+      <Input addNote={addNote}/>
     </>
   )
 }

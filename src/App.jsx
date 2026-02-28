@@ -5,21 +5,32 @@ import TodoItem from './components/TodoItem.jsx';
 
 function App() {
   
-
-
+  const [notesList, setNotesList] = useState([]);
+  const [id, setId] = useState(1);
+ 
   function addNote(text){
-    console.log(text);
+    //console.log(text);
+    setNotesList([...notesList, {id:id, text:text}]);
+    setId(id + 1);
   }
 
   function deleteTodoItem(itemId){
-    console.log("go to delete item " + itemId);
+    //console.log("go to delete item " + itemId);
+    setNotesList(notesList.filter(note => note.id != itemId));
   }
+
 
   return (
     <>
       <h1>To Do List</h1>
       <Input addNote={addNote}/>
-      <TodoItem itemId="1" deleteItem={deleteTodoItem}/>
+      <div>
+        {
+          notesList.map((note) =>{
+            return (<TodoItem key={note.id} itemId={note.id} text={note.text} deleteItem={deleteTodoItem} />); 
+          })
+        }
+      </div>
     </>
   )
 }

@@ -14,9 +14,28 @@ body{
 
 }
 
+.bg-blue{
+   background: #00f;
+   color:#fff;
+}
+
+.bg-white {
+  background: #fff;
+  color:#000;
+}
+
+.bg-red {
+  background: #f00;
+  color:#fff;
+}
+
+.bg-yellow {
+  background: #f0e000;
+  color:#000;
+}
 
 .note {
-  background: #fff;
+
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;

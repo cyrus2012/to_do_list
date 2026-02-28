@@ -8,9 +8,9 @@ function App() {
   const [notesList, setNotesList] = useState([]);
   const [id, setId] = useState(1);
  
-  function addNote(text){
+  function addNote(note){
     //console.log(text);
-    setNotesList([...notesList, {id:id, text:text}]);
+    setNotesList([...notesList, {id:id, text:note.text, bgColor:note.bgColor}]);
     setId(id + 1);
   }
 
@@ -27,7 +27,7 @@ function App() {
       <div>
         {
           notesList.map((note) =>{
-            return (<TodoItem key={note.id} itemId={note.id} text={note.text} deleteItem={deleteTodoItem} />); 
+            return (<TodoItem key={note.id} itemId={note.id} text={note.text} bgColor={note.bgColor} deleteItem={deleteTodoItem} />); 
           })
         }
       </div>

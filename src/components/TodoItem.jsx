@@ -11,7 +11,7 @@ function TodoItem(props){
 
 
     function toggleItemState(event){
-        console.log(event.target.checked);
+        //console.log(event.target.checked);
         setIsCompleted(event.target.checked);
     }
 

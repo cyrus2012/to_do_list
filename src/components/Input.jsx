@@ -23,7 +23,7 @@ function Input(props){
     }
 
     function selectionChange(event){
-        console.log(event.target.value);
+        //console.log(event.target.value);
         switch(event.target.value){
             case 'white': setBgColor('bg-white');
                         break;

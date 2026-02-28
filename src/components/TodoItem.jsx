@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 /**
  * This is a single piece of note
@@ -6,9 +7,12 @@
  */
 function TodoItem(props){
 
+    const [isCompleted, setIsCompleted] = useState(false);
+
+
     function toggleItemState(event){
-    
         console.log(event.target.checked);
+        setIsCompleted(event.target.checked);
     }
 
     function deleteItem(event){
@@ -19,7 +23,7 @@ function TodoItem(props){
     return (
         <div>
             <input type="checkbox" name="item1" onClick={toggleItemState} />
-            <label htmlFor="item1">{props.text}</label>
+            <label htmlFor="item1" className={isCompleted? "textCrossLine" : ""} >{props.text}</label>
             <input type="button" value="delete" onClick={deleteItem}/>
         </div>
     )

@@ -21,9 +21,9 @@ function TodoItem(props){
     }
 
     return (
-        <div>
-            <input type="checkbox" name="item1" onClick={toggleItemState} />
-            <label htmlFor="item1" className={isCompleted? "textCrossLine" : ""} >{props.text}</label>
+        <div className="note">
+            <input type="checkbox" name={"item" + props.itemId} onClick={toggleItemState} />
+            <p htmlFor={"item" + props.itemId} className={isCompleted? "textCrossLine" : "" } >{props.text}</p>
             <input type="button" value="delete" onClick={deleteItem}/>
         </div>
     )

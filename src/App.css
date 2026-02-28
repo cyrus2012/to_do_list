@@ -46,6 +46,7 @@ body{
 
 
 
-.textCrossLine {
+.finished {
   text-decoration: line-through;
+  color:gray;
 }

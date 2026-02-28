@@ -10,7 +10,7 @@ function App() {
  
   function addNote(note){
     //console.log(text);
-    setNotesList([...notesList, {id:id, text:note.text, bgColor:note.bgColor}]);
+    setNotesList([{id:id, text:note.text, bgColor:note.bgColor}, ...notesList]);
     setId(id + 1);
   }
 

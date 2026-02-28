@@ -23,7 +23,7 @@ function TodoItem(props){
     return (
         <div className={"note " + props.bgColor}>
             <input type="checkbox" name={"item" + props.itemId} onClick={toggleItemState} />
-            <p htmlFor={"item" + props.itemId} className={isCompleted? "textCrossLine" : "" } >{props.text}</p>
+            <p htmlFor={"item" + props.itemId} className={isCompleted? "finished" : "" } >{props.text}</p>
             <input type="button" value="delete" onClick={deleteItem}/>
         </div>
     )
